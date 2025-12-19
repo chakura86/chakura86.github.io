@@ -1650,8 +1650,8 @@ canvas:not(#ribbon-canvas),
   --tab-button-bg: #f0f0f0;
   --tab-button-color: #1f2d3d;
   --tab-button-hover-bg: #dcdcdc;
-  --tab-button-active-bg: rgba(255,255,255,0);
-  --card-bg: rgba(255,255,255,0);
+  --tab-button-active-bg: rgba(255,255,255,0.8);
+  --card-bg: rgba(255,255,255,0.8);
   --card-meta: #858585;
   --sidebar-bg: #f6f8fa;
   --sidebar-menu-bg: #fff;
@@ -1764,6 +1764,16 @@ body {
 }
 input::placeholder {
   color: var(--font-color);
+}
+#web_bg {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 h1,
 h2,
@@ -4159,17 +4169,10 @@ figure.highlight pre .javascript .function {
 }
 #footer {
   position: relative;
-  background-color: #49b1f5;
+  background-color: transparent;
   background-attachment: scroll;
   background-position: bottom;
   background-size: cover;
-}
-#footer:before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--mark-bg);
-  content: '';
 }
 #footer > * {
   position: relative;
@@ -4221,7 +4224,7 @@ figure.highlight pre .javascript .function {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 40px 60px;
+  padding: 20px 60px 10px;
   max-width: 1200px;
   width: 100%;
   text-align: left;
@@ -4229,7 +4232,7 @@ figure.highlight pre .javascript .function {
 }
 @media screen and (max-width: 768px) {
   #footer .footer-flex {
-    padding: 30px;
+    padding: 20px 30px 10px;
     gap: 10px;
   }
 }
@@ -4255,7 +4258,7 @@ figure.highlight pre .javascript .function {
   white-space: nowrap;
 }
 #footer .footer-other {
-  padding: 40px 20px;
+  padding: 10px 20px 20px;
   width: 100%;
   text-align: center;
 }
