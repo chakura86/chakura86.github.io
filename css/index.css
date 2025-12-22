@@ -5648,6 +5648,12 @@ figure.highlight pre .javascript .function {
     display: none;
   }
 }
+#music-box {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 9999;
+}
 .container .btn-center {
   margin: 0 0 20px;
   text-align: center;
